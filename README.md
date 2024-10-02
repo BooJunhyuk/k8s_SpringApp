@@ -1,9 +1,8 @@
 # K8S SpringApp 배포
 <!-- Add Image Here -->
 
-여기에 아키텍처 이미지 추가
+![kubernetes_architecture](https://github.com/user-attachments/assets/0f741a74-189c-4be8-bcee-4020ee6214ff)
 
-<!-- Add Badge Here (https://shields.io/) -->
 
 <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 
