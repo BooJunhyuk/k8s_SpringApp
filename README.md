@@ -1,12 +1,11 @@
 # K8S_SpringApp
 <!-- Add Image Here -->
 
-여기에 아키텍처 이미지 
+여기에 아키텍처 이미지 추가
 
 <!-- Add Badge Here (https://shields.io/) -->
 
 <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
 
 
 ## 목적
@@ -15,7 +14,7 @@
 
 
 ## Getting Started
-### docker
+### Docker
 **docker image build**
 
 ```bash
@@ -89,7 +88,7 @@ b2ab99759f68: Pushed
 ```bash
 kubectl apply -f deployment.yaml
 ```
-
+생성
 ```bash
 deployment.apps/springapp-deployment created
 ```
@@ -99,44 +98,31 @@ deployment.apps/springapp-deployment created
 ```bash
 kubectl apply -f service.yaml
 ```
-
+생성
 ```bash
 service/springapp-service created
 ```
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+## Check
 
-**확인**
+**확인 내용**
 
-확인해야할 내용
+deployment.yaml의 생성할 파드의 개수
+```
+replicas: 3
+```
+pod 3개 맞는지 check
 
-pod가 3개 맞는지
-
-service External-ip가 설정되어 있는지
+service의 External-ip가 설정되어 있는지 check
 
 ```bash
 kubectl get all
 ```
 
-```bash
-NAME                                       READY   STATUS    RESTARTS   AGE
-pod/springapp-deployment-9758bbc6b-4h2w7   1/1     Running   0          11s
-pod/springapp-deployment-9758bbc6b-4l2zf   1/1     Running   0          11s
-pod/springapp-deployment-9758bbc6b-dsmg6   1/1     Running   0          11s
-
-NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP      PORT(S)        AGE
-service/kubernetes          ClusterIP      10.96.0.1        <none>           443/TCP        111m
-service/springapp-service   LoadBalancer   10.110.195.154   10.110.195.154   80:30762/TCP   4s
-
-NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/springapp-deployment   3/3     3            3           11s
-
-NAME                                             DESIRED   CURRENT   READY   AGE
-replicaset.apps/springapp-deployment-9758bbc6b   3         3         3       11s
-```
-
 ![image 1](https://github.com/user-attachments/assets/0b528b90-d569-4d1e-aa90-2603491abf0e)
 
 
-잘 배포되어있는지확인
+**배포상태확인**
 
 ```bash
 kubectl logs springapp-deployment-9758bbc6b-4h2w7
@@ -153,19 +139,18 @@ kubectl logs springapp-deployment-9758bbc6b-dsmg6
 ![image 4](https://github.com/user-attachments/assets/ad01741d-11a0-495f-a223-c0408a6ce684)
 
 
-vscode사용 시 port 추가
+**vscode사용 시 port 추가**
 
 ![image 5](https://github.com/user-attachments/assets/aa013759-c85d-4512-8eb6-0c54f0075e8f)
 
 
-localhost:80/test로 접속
+**localhost:80/test로 접속**
 
 ![image 6](https://github.com/user-attachments/assets/3bc7567c-7d64-4c82-b8d7-65072560ef5d)
 
 
-확인
 
-워크로드 페이지
+**워크로드 페이지**
 
 ![image 7](https://github.com/user-attachments/assets/85357e56-68d0-4a91-9784-de296a809175)
 
@@ -175,7 +160,7 @@ localhost:80/test로 접속
 
 ### 트러블슈팅
 
-service.yaml 파일의 targetPort를 8080으로해서 localhost에 접속이 불가능했음
+service.yaml 파일의 targetPort를 8080으로 해서 localhost에 접속이 불가능
 
 ```bash
 apiVersion: v1
@@ -192,7 +177,7 @@ spec:
   type: LoadBalancer
 ```
 
-application.properties의 server.port 는 8900으로 되어 있음
+application.properties의 server.port는 8900으로 되어 있음
 
 ![image 9](https://github.com/user-attachments/assets/1d365280-706f-40ea-995b-42903c1d67c7)
 
@@ -209,100 +194,12 @@ spec:
     app: springapp
   ports:
     - protocol: TCP
-      port: 80 # local에서 접속하는 port ###########################################
-      targetPort: 8900 # springapp이 실행되는 port ###########################################
+      port: 80 # local에서 접속하는 port 
+      targetPort: 8900 # springapp이 실행되는 port 
   type: LoadBalancer  # LoadBalancer 유형을 사용하여 외부 접근 가능
 
 ```
 
 deployment, service 삭제 후 
 
-다시 실행하면 정상적으로 실행가능!!
-
-
-
-
-
-## Getting Started
-
-Instructions on setting up your project locally  
-To get a local copy up and running follow these simple steps
-
-### Prerequisites
-
-List things you need to use the software
-
-- [Example 1]()
-- [Example 2]()
-
-### Installation
-
-Run under scripts
-
-```sh
-git clone <project>
-cd <project>
-```
-
-### Run
-
-Run under scripts
-
-```sh
-run <environment>
-```
-
-### Test
-
-Run under scripts
-
-```sh
-test <environment>
-```
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-## Built With
-
-List things used to build the project
-
-- [Example 1]() - One line of the description
-- [Example 2]() - One line of the description
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-## Roadmap
-
-### v1.0.0
-
-- [x] One feature of project and developed
-- [ ] One feature of project and undeveloped
-
-> **Note**
-> Will be completed on January 1, 2100
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-## Community
-
-List of link that can communicate about project
-
-- [Discord]()
-- [Slack]()
-- [Reddit]()
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-## Contributing
-
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md)
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-## License
-
-<!-- Can choose a license by creating a LICENSE file in GitHub -->
-
-This project is licensed under the [MIT](./LICENSE)
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+다시 적용하면 정상적으로 실행가능!!
