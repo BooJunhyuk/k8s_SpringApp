@@ -158,7 +158,8 @@ kubectl logs springapp-deployment-9758bbc6b-dsmg6
 ![image 8](https://github.com/user-attachments/assets/f9e0daf5-59bf-4f86-9cb4-736d077a334b)
 
 
-### 트러블슈팅
+
+## 트러블슈팅
 <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 service.yaml 파일의 targetPort를 8080으로 해서 localhost에 접속이 불가능
 
