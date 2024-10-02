@@ -1,4 +1,4 @@
-# K8S_SpringApp
+# K8S SpringApp 배포
 <!-- Add Image Here -->
 
 여기에 아키텍처 이미지 추가
@@ -10,7 +10,7 @@
 
 ## 목적
 
-어쩌구저쩌구
+목적작성
 
 
 ## Getting Started
