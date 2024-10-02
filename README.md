@@ -1,9 +1,21 @@
 # K8S_SpringApp
+<!-- Add Image Here -->
+
+여기에 아키텍처 이미지 
+
+<!-- Add Badge Here (https://shields.io/) -->
+
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+
 
 ## 목적
 
-어쩌구
+어쩌구저쩌구
 
+
+## Getting Started
+### docker
 **docker image build**
 
 ```bash
@@ -68,6 +80,9 @@ b2ab99759f68: Pushed
 
 ![image](https://github.com/user-attachments/assets/d7cff05a-fe43-4df7-9c3c-a0450cec4517)
 
+<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+## K8S
 
 **deployment 적용**
 
@@ -207,20 +222,6 @@ deployment, service 삭제 후
 
 
 
-<!-- Add Image Here -->
-
-One Paragraph of the project description
-
-<!-- Add Badge Here (https://shields.io/) -->
-
-<a href="#getting-started">Getting Started</a> •
-<a href="#built-with">Built With</a> •
-<a href="#roadmap">Roadmap</a> •
-<a href="#community">Community</a> •
-<a href="#contributing">Contributing</a> •
-<a href="#license">License</a>
-
-<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 
 ## Getting Started
 
